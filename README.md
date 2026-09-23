@@ -11,32 +11,6 @@ feature ranking, Optuna (TPE) hyperparameter optimization, a hybrid XGBoost +
 LightGBM soft-voting ensemble with isotonic calibration, a federated-learning
 simulation over heterogeneous non-IID clients, and SHAP-based explainability.
 
-## Layout
-
-```
-FL-XAI-Intrusion-Detection-IIoT/
-├── data/                          # Edge-IIoTset ML CSV (download separately)
-├── src/                           # modular, extensible pipeline
-│   ├── config.py                  # all seeds, paths, hyperparameters
-│   ├── data_loader.py             # dataset ingestion
-│   ├── preprocessing.py           # cleaning, class abstraction, scaling
-│   ├── balancing.py               # SMOTE
-│   ├── feature_selection.py       # Random-Forest importance
-│   ├── optimization.py            # Optuna TPE search
-│   ├── models.py                  # base learners, hybrid, calibration
-│   ├── federated.py               # FL simulation (non-IID + FedAvg)
-│   ├── explainability.py          # SHAP TreeExplainer
-│   ├── evaluation.py              # metrics, efficiency benchmarks
-│   ├── visualization.py           # plots
-│   ├── persistence.py             # model save/load (joblib)
-│   ├── export.py                  # production export (native/ONNX/manifest)
-│   └── pipeline.py                # end-to-end orchestration
-├── FL-XAI-intrusion-detection.ipynb  # notebook entrypoint
-├── outputs/                       # generated tables/figures/models/export
-├── requirements.txt               # core dependencies
-└── requirements-export.txt        # optional ONNX export dependencies
-```
-
 ## Setup
 
 A Python 3.12 environment is required.
