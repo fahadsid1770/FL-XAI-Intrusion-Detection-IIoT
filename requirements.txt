@@ -1,0 +1,12 @@
+numpy>=1.26,<2.3
+pandas>=2.1
+scikit-learn>=1.4
+imbalanced-learn>=0.12
+xgboost>=2.0
+lightgbm>=4.3
+catboost>=1.2
+shap>=0.45
+optuna>=3.6
+matplotlib>=3.8
+seaborn>=0.13
+joblib>=1.3

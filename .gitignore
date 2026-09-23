@@ -1,0 +1,16 @@
+# Environment
+.venv/
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+
+# Data (large, downloaded separately)
+data/*.csv
+data/*.rar
+
+# Generated artifacts
+outputs/
+
+# OS
+.DS_Store

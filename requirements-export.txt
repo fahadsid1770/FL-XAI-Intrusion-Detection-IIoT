@@ -1,0 +1,6 @@
+# Optional dependencies for production model export (src/export.py).
+# Not required for training/inference — export.py degrades gracefully if absent.
+onnx>=1.15
+onnxruntime>=1.18
+skl2onnx>=1.16
+onnxmltools>=1.12
