@@ -1,11 +1,11 @@
 # FL-XAI Intrusion Detection for IIoT
 
-A faithful, modular reproduction of *"A Federated and Explainable Machine
+The implementation code of *"A Federated and Explainable Machine
 Learning Framework for Robust Intrusion Detection and Network Security
 Enhancement in Industrial Internet of Things (IIoT) Environments"*
 (ICECTE 2026).
 
-The pipeline reflects the paper's full methodology on the **Edge-IIoTset**
+The pipeline reflects the research's full methodology on the **Edge-IIoTset**
 dataset: preprocessing and class abstraction, SMOTE balancing, Random-Forest
 feature ranking, Optuna (TPE) hyperparameter optimization, a hybrid XGBoost +
 LightGBM soft-voting ensemble with isotonic calibration, a federated-learning
