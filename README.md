@@ -1,41 +1,15 @@
 # FL-XAI Intrusion Detection for IIoT
 
-A faithful, modular reproduction of *"A Federated and Explainable Machine
+The implementation code of *"A Federated and Explainable Machine
 Learning Framework for Robust Intrusion Detection and Network Security
 Enhancement in Industrial Internet of Things (IIoT) Environments"*
 (ICECTE 2026).
 
-The pipeline reflects the paper's full methodology on the **Edge-IIoTset**
+The pipeline reflects the research's full methodology on the **Edge-IIoTset**
 dataset: preprocessing and class abstraction, SMOTE balancing, Random-Forest
 feature ranking, Optuna (TPE) hyperparameter optimization, a hybrid XGBoost +
 LightGBM soft-voting ensemble with isotonic calibration, a federated-learning
 simulation over heterogeneous non-IID clients, and SHAP-based explainability.
-
-## Layout
-
-```
-FL-XAI-Intrusion-Detection-IIoT/
-├── data/                          # Edge-IIoTset ML CSV (download separately)
-├── src/                           # modular, extensible pipeline
-│   ├── config.py                  # all seeds, paths, hyperparameters
-│   ├── data_loader.py             # dataset ingestion
-│   ├── preprocessing.py           # cleaning, class abstraction, scaling
-│   ├── balancing.py               # SMOTE
-│   ├── feature_selection.py       # Random-Forest importance
-│   ├── optimization.py            # Optuna TPE search
-│   ├── models.py                  # base learners, hybrid, calibration
-│   ├── federated.py               # FL simulation (non-IID + FedAvg)
-│   ├── explainability.py          # SHAP TreeExplainer
-│   ├── evaluation.py              # metrics, efficiency benchmarks
-│   ├── visualization.py           # plots
-│   ├── persistence.py             # model save/load (joblib)
-│   ├── export.py                  # production export (native/ONNX/manifest)
-│   └── pipeline.py                # end-to-end orchestration
-├── FL-XAI-intrusion-detection.ipynb  # notebook entrypoint
-├── outputs/                       # generated tables/figures/models/export
-├── requirements.txt               # core dependencies
-└── requirements-export.txt        # optional ONNX export dependencies
-```
 
 ## Setup
 
