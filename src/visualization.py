@@ -36,13 +36,12 @@ def plot_class_distribution(counts: dict, title: str, ax=None, kind: str = "bar"
 
 
 def plot_confusion_matrix(cm, class_names, title: str, ax=None):
-    """Plot a normalized multi-class confusion matrix as a heatmap."""
+    """Plot a multi-class confusion matrix (raw counts) as a heatmap."""
     if ax is None:
-        _, ax = plt.subplots(figsize=(8, 7))
-    cm_norm = cm.astype(float) / cm.sum(axis=1, keepdims=True)
-    sns.heatmap(cm_norm, annot=True, fmt=".2f", cmap="viridis",
+        _, ax = plt.subplots(figsize=(10, 9))
+    sns.heatmap(cm, annot=True, fmt="d", cmap="Blues",
                 xticklabels=class_names, yticklabels=class_names, ax=ax,
-                cbar_kws={"label": "Normalized"})
+                cbar_kws={"label": "Count"})
     ax.set_title(title, fontweight="bold")
     ax.set_xlabel("Predicted")
     ax.set_ylabel("True")
